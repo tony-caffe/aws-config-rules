@@ -98,6 +98,9 @@ Resources:
           - accessKeysRotatedParamMaxAccessKeyAge
           - Ref: AccessKeysRotatedParamMaxAccessKeyAge
           - Ref: AWS::NoValue
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ACCESS_KEYS_ROTATED
@@ -105,6 +108,9 @@ Resources:
   AccountPartOfOrganizations:
     Properties:
       ConfigRuleName: account-part-of-organizations
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ACCOUNT_PART_OF_ORGANIZATIONS
@@ -121,6 +127,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ACM::Certificate
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ACM_CERTIFICATE_EXPIRATION_CHECK
@@ -131,6 +139,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ElasticLoadBalancingV2::LoadBalancer
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ALB_HTTP_DROP_INVALID_HEADER_ENABLED
@@ -138,6 +148,9 @@ Resources:
   AlbHttpToHttpsRedirectionCheck:
     Properties:
       ConfigRuleName: alb-http-to-https-redirection-check
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ALB_HTTP_TO_HTTPS_REDIRECTION_CHECK
@@ -148,6 +161,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ElasticLoadBalancingV2::LoadBalancer
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ALB_WAF_ENABLED
@@ -158,6 +173,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ApiGateway::Stage
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: API_GW_ASSOCIATED_WITH_WAF
@@ -168,6 +185,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ApiGateway::Stage
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: API_GW_CACHE_ENABLED_AND_ENCRYPTED
@@ -179,6 +198,8 @@ Resources:
         ComplianceResourceTypes:
         - AWS::ApiGateway::Stage
         - AWS::ApiGatewayV2::Stage
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: API_GW_EXECUTION_LOGGING_ENABLED
@@ -189,6 +210,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ApiGateway::Stage
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: API_GW_SSL_ENABLED
@@ -199,6 +222,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::AutoScaling::AutoScalingGroup
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: AUTOSCALING_GROUP_ELB_HEALTHCHECK_REQUIRED
@@ -209,6 +234,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::AutoScaling::LaunchConfiguration
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: AUTOSCALING_LAUNCH_CONFIG_PUBLIC_IP_DISABLED
@@ -216,6 +243,9 @@ Resources:
   CloudTrailCloudWatchLogsEnabled:
     Properties:
       ConfigRuleName: cloud-trail-cloud-watch-logs-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CLOUD_TRAIL_CLOUD_WATCH_LOGS_ENABLED
@@ -223,6 +253,9 @@ Resources:
   CloudTrailEnabled:
     Properties:
       ConfigRuleName: cloudtrail-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CLOUD_TRAIL_ENABLED
@@ -230,6 +263,9 @@ Resources:
   CloudTrailEncryptionEnabled:
     Properties:
       ConfigRuleName: cloud-trail-encryption-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CLOUD_TRAIL_ENCRYPTION_ENABLED
@@ -237,6 +273,9 @@ Resources:
   CloudTrailLogFileValidationEnabled:
     Properties:
       ConfigRuleName: cloud-trail-log-file-validation-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CLOUD_TRAIL_LOG_FILE_VALIDATION_ENABLED
@@ -244,6 +283,9 @@ Resources:
   CloudtrailS3DataeventsEnabled:
     Properties:
       ConfigRuleName: cloudtrail-s3-dataevents-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CLOUDTRAIL_S3_DATAEVENTS_ENABLED
@@ -251,6 +293,9 @@ Resources:
   CloudwatchLogGroupEncrypted:
     Properties:
       ConfigRuleName: cloudwatch-log-group-encrypted
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CLOUDWATCH_LOG_GROUP_ENCRYPTED
@@ -258,6 +303,9 @@ Resources:
   CmkBackingKeyRotationEnabled:
     Properties:
       ConfigRuleName: cmk-backing-key-rotation-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CMK_BACKING_KEY_ROTATION_ENABLED
@@ -268,6 +316,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::CodeBuild::Project
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CODEBUILD_PROJECT_ENVVAR_AWSCRED_CHECK
@@ -278,6 +328,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::CodeBuild::Project
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CODEBUILD_PROJECT_SOURCE_REPO_URL_CHECK
@@ -291,6 +343,9 @@ Resources:
           - cwLoggroupRetentionPeriodCheckParamMinRetentionTime
           - Ref: CwLoggroupRetentionPeriodCheckParamMinRetentionTime
           - Ref: AWS::NoValue
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: CW_LOGGROUP_RETENTION_PERIOD_CHECK
@@ -300,6 +355,8 @@ Resources:
       ConfigRuleName: dms-replication-not-public
       Scope:
         ComplianceResourceTypes: []
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: DMS_REPLICATION_NOT_PUBLIC
@@ -310,6 +367,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::DynamoDB::Table
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: DYNAMODB_TABLE_ENCRYPTED_KMS
@@ -317,6 +376,9 @@ Resources:
   EbsSnapshotPublicRestorableCheck:
     Properties:
       ConfigRuleName: ebs-snapshot-public-restorable-check
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EBS_SNAPSHOT_PUBLIC_RESTORABLE_CHECK
@@ -324,6 +386,9 @@ Resources:
   Ec2EbsEncryptionByDefault:
     Properties:
       ConfigRuleName: ec2-ebs-encryption-by-default
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EC2_EBS_ENCRYPTION_BY_DEFAULT
@@ -335,6 +400,8 @@ Resources:
         ComplianceResourceTypes:
         - AWS::EC2::Instance
         - AWS::SSM::ManagedInstanceInventory
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EC2_INSTANCE_MANAGED_BY_SSM
@@ -345,6 +412,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::Instance
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EC2_INSTANCE_NO_PUBLIC_IP
@@ -355,6 +424,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::Instance
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EC2_INSTANCE_PROFILE_ATTACHED
@@ -365,6 +436,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::SSM::AssociationCompliance
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EC2_MANAGEDINSTANCE_ASSOCIATION_COMPLIANCE_STATUS_CHECK
@@ -375,6 +448,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::SSM::PatchCompliance
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EC2_MANAGEDINSTANCE_PATCH_COMPLIANCE_STATUS_CHECK
@@ -385,6 +460,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ECS::TaskDefinition
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ECS_TASK_DEFINITION_USER_FOR_HOST_MODE_CHECK
@@ -392,6 +469,9 @@ Resources:
   EfsEncryptedCheck:
     Properties:
       ConfigRuleName: efs-encrypted-check
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EFS_ENCRYPTED_CHECK
@@ -399,6 +479,9 @@ Resources:
   ElasticsearchEncryptedAtRest:
     Properties:
       ConfigRuleName: elasticsearch-encrypted-at-rest
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ELASTICSEARCH_ENCRYPTED_AT_REST
@@ -406,6 +489,9 @@ Resources:
   ElasticsearchInVpcOnly:
     Properties:
       ConfigRuleName: elasticsearch-in-vpc-only
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ELASTICSEARCH_IN_VPC_ONLY
@@ -416,6 +502,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Elasticsearch::Domain
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ELASTICSEARCH_LOGS_TO_CLOUDWATCH
@@ -426,6 +514,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Elasticsearch::Domain
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ELASTICSEARCH_NODE_TO_NODE_ENCRYPTION_CHECK
@@ -436,6 +526,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ElasticLoadBalancing::LoadBalancer
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ELB_ACM_CERTIFICATE_REQUIRED
@@ -447,6 +539,8 @@ Resources:
         ComplianceResourceTypes:
         - AWS::ElasticLoadBalancing::LoadBalancer
         - AWS::ElasticLoadBalancingV2::LoadBalancer
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ELB_LOGGING_ENABLED
@@ -463,6 +557,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ElasticLoadBalancing::LoadBalancer
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ELB_PREDEFINED_SECURITY_POLICY_SSL_CHECK
@@ -473,6 +569,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::ElasticLoadBalancing::LoadBalancer
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ELB_TLS_HTTPS_LISTENERS_ONLY
@@ -480,6 +578,9 @@ Resources:
   Elbv2AcmCertificateRequired:
     Properties:
       ConfigRuleName: elbv2-acm-certificate-required
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ELBV2_ACM_CERTIFICATE_REQUIRED
@@ -487,6 +588,9 @@ Resources:
   EmrKerberosEnabled:
     Properties:
       ConfigRuleName: emr-kerberos-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EMR_KERBEROS_ENABLED
@@ -496,6 +600,8 @@ Resources:
       ConfigRuleName: emr-master-no-public-ip
       Scope:
         ComplianceResourceTypes: []
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: EMR_MASTER_NO_PUBLIC_IP
@@ -506,6 +612,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::Volume
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ENCRYPTED_VOLUMES
@@ -513,6 +621,9 @@ Resources:
   GuarddutyEnabledCentralized:
     Properties:
       ConfigRuleName: guardduty-enabled-centralized
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: GUARDDUTY_ENABLED_CENTRALIZED
@@ -529,6 +640,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::IAM::Policy
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_CUSTOMER_POLICY_BLOCKED_KMS_ACTIONS
@@ -539,6 +652,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::IAM::Group
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_GROUP_HAS_USERS_CHECK
@@ -557,6 +672,8 @@ Resources:
         - AWS::IAM::Group
         - AWS::IAM::Role
         - AWS::IAM::User
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_INLINE_POLICY_BLOCKED_KMS_ACTIONS
@@ -569,6 +686,8 @@ Resources:
         - AWS::IAM::User
         - AWS::IAM::Role
         - AWS::IAM::Group
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_NO_INLINE_POLICY_CHECK
@@ -612,6 +731,9 @@ Resources:
           - iamPasswordPolicyParamRequireUppercaseCharacters
           - Ref: IamPasswordPolicyParamRequireUppercaseCharacters
           - Ref: AWS::NoValue
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_PASSWORD_POLICY
@@ -622,6 +744,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::IAM::Policy
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_POLICY_NO_STATEMENTS_WITH_ADMIN_ACCESS
@@ -632,6 +756,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::IAM::Policy
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_POLICY_NO_STATEMENTS_WITH_FULL_ACCESS
@@ -639,6 +765,9 @@ Resources:
   IamRootAccessKeyCheck:
     Properties:
       ConfigRuleName: iam-root-access-key-check
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_ROOT_ACCESS_KEY_CHECK
@@ -649,6 +778,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::IAM::User
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_USER_GROUP_MEMBERSHIP_CHECK
@@ -656,6 +787,9 @@ Resources:
   IamUserMfaEnabled:
     Properties:
       ConfigRuleName: iam-user-mfa-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_USER_MFA_ENABLED
@@ -666,6 +800,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::IAM::User
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_USER_NO_POLICIES_CHECK
@@ -679,6 +815,9 @@ Resources:
           - iamUserUnusedCredentialsCheckParamMaxCredentialUsageAge
           - Ref: IamUserUnusedCredentialsCheckParamMaxCredentialUsageAge
           - Ref: AWS::NoValue
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: IAM_USER_UNUSED_CREDENTIALS_CHECK
@@ -689,6 +828,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::SecurityGroup
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: INCOMING_SSH_DISABLED
@@ -699,6 +840,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::Instance
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: INSTANCES_IN_VPC
@@ -709,6 +852,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::KMS::Key
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: KMS_CMK_NOT_SCHEDULED_FOR_DELETION
@@ -719,6 +864,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Lambda::Function
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: LAMBDA_FUNCTION_PUBLIC_ACCESS_PROHIBITED
@@ -729,6 +876,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Lambda::Function
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: LAMBDA_INSIDE_VPC
@@ -736,6 +885,9 @@ Resources:
   MfaEnabledForIamConsoleAccess:
     Properties:
       ConfigRuleName: mfa-enabled-for-iam-console-access
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: MFA_ENABLED_FOR_IAM_CONSOLE_ACCESS
@@ -743,6 +895,9 @@ Resources:
   MultiRegionCloudTrailEnabled:
     Properties:
       ConfigRuleName: multi-region-cloudtrail-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: MULTI_REGION_CLOUD_TRAIL_ENABLED
@@ -753,6 +908,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::RouteTable
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: NO_UNRESTRICTED_ROUTE_TO_IGW
@@ -763,6 +920,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::RDS::DBInstance
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: RDS_AUTOMATIC_MINOR_VERSION_UPGRADE_ENABLED
@@ -773,6 +932,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::RDS::DBInstance
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: RDS_INSTANCE_PUBLIC_ACCESS_CHECK
@@ -783,6 +944,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::RDS::DBInstance
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: RDS_LOGGING_ENABLED
@@ -794,6 +957,8 @@ Resources:
         ComplianceResourceTypes:
         - AWS::RDS::DBSnapshot
         - AWS::RDS::DBClusterSnapshot
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: RDS_SNAPSHOT_ENCRYPTED
@@ -805,6 +970,8 @@ Resources:
         ComplianceResourceTypes:
         - AWS::RDS::DBSnapshot
         - AWS::RDS::DBClusterSnapshot
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: RDS_SNAPSHOTS_PUBLIC_PROHIBITED
@@ -815,6 +982,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::RDS::DBInstance
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: RDS_STORAGE_ENCRYPTED
@@ -836,6 +1005,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Redshift::Cluster
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: REDSHIFT_CLUSTER_CONFIGURATION_CHECK
@@ -846,6 +1017,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Redshift::Cluster
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: REDSHIFT_CLUSTER_KMS_ENABLED
@@ -862,6 +1035,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Redshift::Cluster
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: REDSHIFT_CLUSTER_MAINTENANCESETTINGS_CHECK
@@ -872,6 +1047,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Redshift::Cluster
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: REDSHIFT_CLUSTER_PUBLIC_ACCESS_CHECK
@@ -882,6 +1059,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Redshift::Cluster
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: REDSHIFT_ENHANCED_VPC_ROUTING_ENABLED
@@ -892,6 +1071,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::Redshift::Cluster
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: REDSHIFT_REQUIRE_TLS_SSL
@@ -928,6 +1109,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::SecurityGroup
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: RESTRICTED_INCOMING_TRAFFIC
@@ -935,6 +1118,9 @@ Resources:
   RootAccountHardwareMfaEnabled:
     Properties:
       ConfigRuleName: root-account-hardware-mfa-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ROOT_ACCOUNT_HARDWARE_MFA_ENABLED
@@ -942,6 +1128,9 @@ Resources:
   RootAccountMfaEnabled:
     Properties:
       ConfigRuleName: root-account-mfa-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: ROOT_ACCOUNT_MFA_ENABLED
@@ -970,6 +1159,9 @@ Resources:
           - s3AccountLevelPublicAccessBlocksPeriodicParamRestrictPublicBuckets
           - Ref: S3AccountLevelPublicAccessBlocksPeriodicParamRestrictPublicBuckets
           - Ref: AWS::NoValue
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_ACCOUNT_LEVEL_PUBLIC_ACCESS_BLOCKS_PERIODIC
@@ -980,6 +1172,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_BUCKET_LEVEL_PUBLIC_ACCESS_PROHIBITED
@@ -990,6 +1184,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_BUCKET_LOGGING_ENABLED
@@ -1000,6 +1196,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_BUCKET_POLICY_GRANTEE_CHECK
@@ -1010,6 +1208,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_BUCKET_PUBLIC_READ_PROHIBITED
@@ -1020,6 +1220,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_BUCKET_PUBLIC_WRITE_PROHIBITED
@@ -1030,6 +1232,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_BUCKET_REPLICATION_ENABLED
@@ -1040,6 +1244,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED
@@ -1050,6 +1256,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_BUCKET_SSL_REQUESTS_ONLY
@@ -1060,6 +1268,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_BUCKET_VERSIONING_ENABLED
@@ -1070,6 +1280,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::S3::Bucket
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: S3_DEFAULT_ENCRYPTION_KMS
@@ -1077,6 +1289,9 @@ Resources:
   SagemakerEndpointConfigurationKmsKeyConfigured:
     Properties:
       ConfigRuleName: sagemaker-endpoint-configuration-kms-key-configured
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: SAGEMAKER_ENDPOINT_CONFIGURATION_KMS_KEY_CONFIGURED
@@ -1084,6 +1299,9 @@ Resources:
   SagemakerNotebookInstanceKmsKeyConfigured:
     Properties:
       ConfigRuleName: sagemaker-notebook-instance-kms-key-configured
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: SAGEMAKER_NOTEBOOK_INSTANCE_KMS_KEY_CONFIGURED
@@ -1091,6 +1309,9 @@ Resources:
   SagemakerNotebookNoDirectInternetAccess:
     Properties:
       ConfigRuleName: sagemaker-notebook-no-direct-internet-access
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: SAGEMAKER_NOTEBOOK_NO_DIRECT_INTERNET_ACCESS
@@ -1101,6 +1322,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::SecretsManager::Secret
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: SECRETSMANAGER_USING_CMK
@@ -1111,6 +1334,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::SNS::Topic
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: SNS_ENCRYPTED_KMS
@@ -1118,6 +1343,9 @@ Resources:
   SsmDocumentNotPublic:
     Properties:
       ConfigRuleName: ssm-document-not-public
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: SSM_DOCUMENT_NOT_PUBLIC
@@ -1128,6 +1356,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::Subnet
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: SUBNET_AUTO_ASSIGN_PUBLIC_IP_DISABLED
@@ -1138,6 +1368,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::SecurityGroup
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: VPC_DEFAULT_SECURITY_GROUP_CLOSED
@@ -1145,6 +1377,9 @@ Resources:
   VpcFlowLogsEnabled:
     Properties:
       ConfigRuleName: vpc-flow-logs-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: VPC_FLOW_LOGS_ENABLED
@@ -1155,6 +1390,8 @@ Resources:
       Scope:
         ComplianceResourceTypes:
         - AWS::EC2::SecurityGroup
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: VPC_SG_OPEN_ONLY_TO_AUTHORIZED_PORTS
@@ -1162,6 +1399,9 @@ Resources:
   Wafv2LoggingEnabled:
     Properties:
       ConfigRuleName: wafv2-logging-enabled
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: WAFV2_LOGGING_ENABLED
@@ -1170,6 +1410,9 @@ Resources:
     Properties:
       ConfigRuleName: response-plan-exists-maintained
       Description: Ensure incident response plans are established, maintained, and distrubuted to responsible personel.
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: AWS_CONFIG_PROCESS_CHECK
@@ -1178,6 +1421,9 @@ Resources:
     Properties:
       ConfigRuleName: audit-log-policy-exists
       Description: Establish and maintain an audit log management policy that defines your organization's logging requirements. This includes, but is not limited to, review and retention of audit logs.
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: AWS_CONFIG_PROCESS_CHECK
@@ -1186,6 +1432,9 @@ Resources:
     Properties:
       ConfigRuleName: annual-risk-assessment-performed
       Description: Perform an annual risk assessment on your organization. Risk assessments can assist in determining the likelihood and impact of identified risks and/or vulnerabilities affecting an organization.
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: AWS_CONFIG_PROCESS_CHECK
@@ -1194,6 +1443,9 @@ Resources:
     Properties:
       ConfigRuleName: security-awareness-program-exists
       Description: Establish and maintain a security awareness program for your organization. Security awareness programs educate employees on how to protect their organization from various security breaches or incidents.
+      Scope:
+        TagKey: Compliance Framework
+        TagValue: PCI
       Source:
         Owner: AWS
         SourceIdentifier: AWS_CONFIG_PROCESS_CHECK
